@@ -22,7 +22,7 @@ namespace Gregory.Controllers
         public ActionResult Index()
         {
 
-            if (Session["Nome"] == null)
+            if (Session["Nome "] == null)
             {
                 return RedirectToAction("Index", "Login");
             }
@@ -228,6 +228,12 @@ namespace Gregory.Controllers
             _contexto.Usuarios.Remove(usuarioModel);
             _contexto.SaveChanges();
             return RedirectToAction(nameof(Index));
+        }
+
+        public ActionResult Logout()
+        {
+            Session.Abandon();
+            return RedirectToAction("Index", "Login");
         }
 
 

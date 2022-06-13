@@ -16,7 +16,7 @@ namespace Gregory.Models
         public string Nome { get; set; }
 
         [Required(ErrorMessage = "Informe o email para login:")]
-        [DataType(DataType.EmailAddress)]
+        //[DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Informe a senha")]

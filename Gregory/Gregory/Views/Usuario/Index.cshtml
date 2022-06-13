@@ -9,6 +9,9 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
+@{ string nivel = Session["Nivel"].ToString();}
+
 <table class="table">
     <tr>
         <th>
@@ -50,11 +53,22 @@
     <td>
         @Html.DisplayFor(modelItem => item.Nivel)
     </td>
+    @if (nivel.ToString() == "1")
+                {
+<td>
+    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+</td>
+                }
+    else 
+    { 
     <td>
-        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+        
         @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+        
     </td>
+    }
 </tr>
 }
 
