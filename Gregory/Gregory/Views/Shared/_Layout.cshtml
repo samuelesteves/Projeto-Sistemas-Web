@@ -21,10 +21,12 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Início", "Index", "Home")</li>
+                    @*<li>@Html.ActionLink("Início", "Index", "Home")</li>
                     <li>@Html.ActionLink("Sobre", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contato", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Sair","Logout","Usuario")</li>
+                    <li>@Html.ActionLink("Contato", "Contact", "Home")</li>*@
+                    <li>@Html.ActionLink("Usuario", "Index", "Usuario")</li>
+                    <li>@Html.ActionLink("Fornecedor", "Index", "Fornecedor")</li>
+                    <li>@Html.ActionLink("Sair", "Logout", "Usuario")</li>
                 </ul>
             </div>
         </div>

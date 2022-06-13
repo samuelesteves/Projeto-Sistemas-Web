@@ -280,3 +280,4 @@ C:\Users\User\Desktop\Github\Gregory\Gitg\Projeto-Sistemas-Web\Gregory\Gregory\o
 C:\Users\User\Desktop\Github\Gregory\Gitg\Projeto-Sistemas-Web\Gregory\Gregory\obj\Debug\Gregory.csproj.CopyComplete
 C:\Users\User\Desktop\Github\Gregory\Gitg\Projeto-Sistemas-Web\Gregory\Gregory\obj\Debug\Gregory.dll
 C:\Users\User\Desktop\Github\Gregory\Gitg\Projeto-Sistemas-Web\Gregory\Gregory\obj\Debug\Gregory.pdb
+C:\Users\User\Desktop\Github\Gregory\Gitg\Projeto-Sistemas-Web\Gregory\Gregory\obj\Debug\Gregory.Migrations.roupa.resources
