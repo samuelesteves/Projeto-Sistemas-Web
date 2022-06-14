@@ -39,19 +39,37 @@ namespace Gregory.Controllers
             //        usuarios[i].Email = Encoding.Unicode.GetString(dest);
             //    }
 
-            if (erro != null)
+                if (erro != null)
             {
                 TempData["error"] = erro;
             }
 
 
-            //}
+        //    }
             return View();
         }
 
         [HttpPost]
         public ActionResult Verificar (Models.UsuarioModel usuarioModel)
         {
+            //AesCryptoServiceProvider aes = new AesCryptoServiceProvider();
+            //aes.BlockSize = 128;
+            //aes.KeySize = 256;
+            //aes.IV = Encoding.UTF8.GetBytes(AesIV256BD);
+            //aes.Key = Encoding.UTF8.GetBytes(AesKey256BD);
+            //aes.Mode = CipherMode.CBC;
+            //aes.Padding = PaddingMode.PKCS7;
+
+            //byte[] src = Encoding.Unicode.GetBytes(usuarioModel.Email);
+
+            //using (ICryptoTransform encrypt = aes.CreateEncryptor())
+            //{
+            //    byte[] dest = encrypt.TransformFinalBlock(src, 0, src.Length);
+
+            //    usuarioModel.Email = Convert.ToBase64String(dest);
+            //}
+
+
             AesCryptoServiceProvider aes = new AesCryptoServiceProvider();
             aes.BlockSize = 128;
             aes.KeySize = 256;
@@ -79,8 +97,8 @@ namespace Gregory.Controllers
 
             if (BCrypt.Net.BCrypt.Verify(usuarioModel.Senha, Consulta.Senha))
             {
-                Session["Nome "] = Consulta.Nome;
-                Session["Nivel "] = Consulta.Nivel;
+                Session["Nome"] = Consulta.Nome;
+                Session["Nivel"] = Consulta.Nivel;
                 return RedirectToAction("Index", "Usuario");
             }
 
